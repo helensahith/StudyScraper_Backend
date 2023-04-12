@@ -30,6 +30,7 @@ const ocrController = async (req, res, next) => {
   const response = await axios.post(url, formData, {
     headers: {
       apikey: apikey,
+      OCREngine: 2,
       "Content-Type": "multipart/form-data",
     },
   });
