@@ -12,7 +12,7 @@ const Ucontroller = async (req, res) => {
   const chart = rated ? "mostPopular" : "";
 
   console.log(query);
-  let channelid = "UC8butISFwT-Wl7EV0hUK0BQ";
+  let channelid = null;
   if (chn) {
     console.log(chn);
     const d = await youtube.search.list({
