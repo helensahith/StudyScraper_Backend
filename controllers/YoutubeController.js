@@ -32,7 +32,8 @@ const Ucontroller = async (req, res) => {
     channelId: channelid,
   });
 
-  const content = await wikiController(query);
+  const content = await wikiController(query.split(" ")[2]);
+  // console.log(query.split(" ")[2]);
   const vidlist = {
     id: item.data.items[0].id.videoId,
     q: item.config.params.q,
